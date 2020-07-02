@@ -1,4 +1,7 @@
 package be.vdab.parts;
 
-public class Psu {
+public class Psu implements ComputerParts {
+    public void buy() {
+
+    }
 }

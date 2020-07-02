@@ -13,7 +13,7 @@ public class MainTest {
 
     PriceList ls = new PriceList(500,750,125,150,100);
 
-    Stock st = new Stock(2,2,8,3,2);
+    Stock st = new Stock(5,4,10,5,10);
 
     Seller alternate = new Store(ls, st);
 
@@ -23,7 +23,8 @@ public class MainTest {
     order1.add(alternate.orderGpu(new GpuBrand[]{GpuBrand.NVIDIA}));
     order1.add(alternate.orderCpu(new CpuBrand[]{CpuBrand.ARM}));
 
-    System.out.println(alternate.getRevenue());
+
+    System.out.println("The total Revenue of this simulation is: " + alternate.getRevenue());
 
     }
 }

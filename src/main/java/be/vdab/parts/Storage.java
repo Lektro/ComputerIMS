@@ -1,4 +1,9 @@
 package be.vdab.parts;
 
-public class Storage {
+public class Storage implements ComputerParts {
+
+
+    public void buy() {
+
+    }
 }

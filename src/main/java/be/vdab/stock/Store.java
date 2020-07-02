@@ -3,8 +3,10 @@ package be.vdab.stock;
 import be.vdab.parts.Cpu;
 import be.vdab.parts.CpuBrand;
 import be.vdab.parts.Gpu;
+import be.vdab.parts.GpuBrand;
 
 public class Store implements Seller {
+
     private PriceList pricelist;
     private double revenue;
     private Stock stock;
@@ -41,8 +43,8 @@ public class Store implements Seller {
         } else throw new NoMorePartsException("Sorry we are out of CPU's!");
     }
 
-    /** Method to order GPU */
-    public Gpu orderGpu(CpuBrand[] gpuBrands) throws NoMorePartsException {
+    /** Method to order GP */
+    public Gpu orderGpu(GpuBrand[] gpuBrands) throws NoMorePartsException {
         if (stock.getGpu() > 0) {
             Gpu gpu = new Gpu(gpuBrands);
             revenue += pricelist.getGpuPrice();

@@ -1,4 +1,8 @@
 package be.vdab.parts;
 
-public class Ram {
+public class Ram implements ComputerParts {
+
+    public void buy() {
+
+    }
 }

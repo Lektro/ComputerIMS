@@ -1,6 +1,7 @@
 package be.vdab.parts;
 
-public class Gpu {
+public class Gpu implements ComputerParts {
+
     private Gpu[] gprocessor;
 
     public Gpu() {
@@ -10,13 +11,17 @@ public class Gpu {
         this.gprocessor = gpuBrand;
     }
 
-    public Gpu(CpuBrand[] gpuBrand) {
+    public Gpu(GpuBrand[] gpuBrand) {
     }
 
-    public Gpu getCpuBrand(GpuBrand[] gpuBrand) {
+    public Gpu getGpuBrand(GpuBrand[] gpuBrand) {
         return null;
     }
 
     public void use() {
+    }
+
+    public void buy() {
+
     }
 }

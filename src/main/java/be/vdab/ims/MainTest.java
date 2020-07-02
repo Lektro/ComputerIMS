@@ -1,8 +1,10 @@
-package be.vdab.stock;
-// import be.vdab.*;
+package be.vdab.ims;
 
 import be.vdab.parts.ComputerParts;
 import be.vdab.parts.CpuBrand;
+import be.vdab.stock.Pricelist;
+import be.vdab.stock.Stock;
+import be.vdab.stock.Store;
 
 import java.util.ArrayList;
 
@@ -17,7 +19,7 @@ public class MainTest {
 
     ArrayList<ComputerParts> order1 = new ArrayList<>();
 
-    order1.add(ComputerParts.getCpuBrand(new CpuBrand[]{CpuBrand.AMD}));
+    order1.add(alternate.orderCpuBrand(new CpuBrand[]{CpuBrand.AMD}));
 
 
 

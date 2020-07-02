@@ -1,6 +1,6 @@
 package be.vdab.stock;
 
-public class Stock {
+public class Stock extends Store {
 
     /** class variables */
     private int cpu;

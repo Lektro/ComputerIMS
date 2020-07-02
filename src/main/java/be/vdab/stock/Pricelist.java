@@ -3,7 +3,7 @@ package be.vdab.stock;
 import be.vdab.parts.ComputerParts;
 import be.vdab.parts.CpuBrand;
 
-public class Pricelist extends ComputerParts {
+public class Pricelist extends Store {
 
     private double cpuPrice;
     private double gpuPrice;
@@ -13,9 +13,12 @@ public class Pricelist extends ComputerParts {
 
     private CpuBrand cpuBrand;
 
-    public Pricelist(){}
+    public Pricelist(){
+        super();
+    }
 
     public Pricelist(double cpuPrice, double gpuPrice, double ramPrice, double moboPrice, double psuPrice) {
+        super();
         this.cpuPrice = cpuPrice;
         this.gpuPrice = gpuPrice;
         this.ramPrice = ramPrice;

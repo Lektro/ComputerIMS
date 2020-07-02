@@ -1,5 +1,6 @@
 package be.vdab.parts;
 
+
 public abstract class ComputerParts {
 
     public String brand;
@@ -29,5 +30,8 @@ public abstract class ComputerParts {
         this.price = price;
     }
 
+    public Cpu getCpuBrand(CpuBrand[] cpuBrand) {
+        return null;
+    } /**throws NoMorePcPartsException*/
 
 }

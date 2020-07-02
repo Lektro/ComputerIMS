@@ -2,6 +2,7 @@ package be.vdab.stock;
 // import be.vdab.*;
 
 import be.vdab.parts.ComputerParts;
+import be.vdab.parts.CpuBrand;
 
 import java.util.ArrayList;
 
@@ -14,9 +15,12 @@ public class MainTest {
 
     Store alternate = new Store(ls, st);
 
-        ArrayList<ComputerParts> order1 = new ArrayList<>();
+    ArrayList<ComputerParts> order1 = new ArrayList<>();
 
-        order1.add(computerParts.order)
+    order1.add(ComputerParts.getCpuBrand(new CpuBrand[]{CpuBrand.AMD}));
+
+
+
 
 
     }

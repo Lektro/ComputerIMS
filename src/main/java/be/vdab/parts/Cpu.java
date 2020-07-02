@@ -4,12 +4,16 @@ public class Cpu extends ComputerParts {
 
     private Cpu[] cpus;
 
-    public void ComputerParts() {
+    public Cpu() {
+
+    }
+
+    public void Cpu() {
         cpus = new Cpu[0];
     }
 
-    public Cpu(Cpu[] cpuBrand){
-        this.cpus = cpuBrand;
+    public Cpu(Cpu[] cpuBrands) {
+        this.cpus = cpuBrands;
     }
 
     public Cpu[] getCpus() {
@@ -32,7 +36,14 @@ public class Cpu extends ComputerParts {
         }
     }
 
-        public void printAllComputerParts() {
+
+    public Cpu getCpuBrand(CpuBrand[] cpuBrand) {
+        return null;
+    }
+
+
+
+    public void printAllComputerParts() {
             System.out.println("All the CPU's are: ");
 
             for (ComputerParts c : cpus) {

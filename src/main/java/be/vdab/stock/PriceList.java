@@ -1,9 +1,8 @@
 package be.vdab.stock;
 
-import be.vdab.parts.ComputerParts;
 import be.vdab.parts.CpuBrand;
 
-public class Pricelist extends Store {
+public class PriceList {
 
     private double cpuPrice;
     private double gpuPrice;
@@ -11,14 +10,9 @@ public class Pricelist extends Store {
     private double moboPrice;
     private double psuPrice;
 
-    private CpuBrand cpuBrand;
+    public PriceList() {}
 
-    public Pricelist(){
-        super();
-    }
-
-    public Pricelist(double cpuPrice, double gpuPrice, double ramPrice, double moboPrice, double psuPrice) {
-        super();
+    public PriceList(double cpuPrice, double gpuPrice, double ramPrice, double moboPrice, double psuPrice) {
         this.cpuPrice = cpuPrice;
         this.gpuPrice = gpuPrice;
         this.ramPrice = ramPrice;
@@ -26,8 +20,9 @@ public class Pricelist extends Store {
         this.psuPrice = psuPrice;
     }
 
-
-    /** auto-generator getter and setter */
+    /**
+     * auto-generator getter and setter
+     */
     public double getCpuPrice() {
         return cpuPrice;
     }
@@ -68,11 +63,4 @@ public class Pricelist extends Store {
         this.psuPrice = psuPrice;
     }
 
-    public CpuBrand getCpuBrand() {
-        return cpuBrand;
-    }
-
-    public void setCpuBrand(CpuBrand cpuBrand) {
-        this.cpuBrand = cpuBrand;
-    }
 }

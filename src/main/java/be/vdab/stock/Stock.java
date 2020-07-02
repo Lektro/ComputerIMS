@@ -1,6 +1,9 @@
 package be.vdab.stock;
 
-public class Stock extends Store {
+import be.vdab.parts.Cpu;
+import be.vdab.parts.CpuBrand;
+
+public class Stock {
 
     /** class variables */
     private int cpu;
@@ -58,4 +61,5 @@ public class Stock extends Store {
     public void setPsu(int psu) {
         this.psu = psu;
     }
+
 }

@@ -1,56 +1,25 @@
 package be.vdab.parts;
 
-public class Cpu extends ComputerParts {
+public class Cpu implements ComputerParts {
 
-    private Cpu[] cpus;
-
-    public Cpu() {
-
+    private Cpu[] processor;
+    
+    public Cpu(){}
+    
+    public Cpu(Cpu[] cpuBrand) {
+        this.processor = cpuBrand;
     }
 
-    public void Cpu() {
-        cpus = new Cpu[0];
+    public Cpu(CpuBrand[] cpuBrands) {
     }
-
-    public Cpu(Cpu[] cpuBrands) {
-        this.cpus = cpuBrands;
-    }
-
-    public Cpu[] getCpus() {
-        return cpus;
-    }
-
-    public void setCpus(Cpu[] cpus) {
-        this.cpus = cpus;
-
-    }
-
-    public void addComputerParts(ComputerParts cpu) {
-        if (!(cpu instanceof Cpu)) {
-            Cpu[] result = new Cpu[cpus.length + 1];
-            for (int i = 0; i < cpus.length; i++) {
-                result[i] = cpus[i];
-            }
-            result[result.length - 1] = (Cpu) cpu;
-            cpus = result;
-        }
-    }
-
 
     public Cpu getCpuBrand(CpuBrand[] cpuBrand) {
         return null;
     }
 
+    public void use() {
 
-
-    public void printAllComputerParts() {
-            System.out.println("All the CPU's are: ");
-
-            for (ComputerParts c : cpus) {
-                System.out.println(c.getBrand() + " " + c.getPrice() + " ");
-            }
-        }
-
+    }
 }
 
 

@@ -6,11 +6,12 @@ import be.vdab.parts.CpuBrand;
 public class Store implements Seller {
     private PriceList pricelist;
     private double revenue;
-
+    private Stock stock;
 
     public Store(){}
-    public Store(PriceList pricelist){
+    public Store(PriceList pricelist, Stock stock){
         this.pricelist = pricelist;
+        this.stock = stock;
     }
 
     public void setRevenue(double revenue) {
@@ -30,12 +31,12 @@ public class Store implements Seller {
     }
 
 
-    public Cpu orderCpu(CpuBrand[] cpuBrands){
-
-        Cpu cpu = new Cpu(cpuBrands);
-        revenue += cpuBrands.length * pricelist.getCpuPrice();
-        return cpu;
-
+    public Cpu orderCpu(CpuBrand[] cpuBrands) throws NoMorePartsException {
+        if (stock.getCpu() > 0) {
+            Cpu cpu = new Cpu(cpuBrands);
+            revenue += pricelist.getCpuPrice();
+            stock.setCpu(stock.getCpu() - 1);
+            return cpu;
+        } else throw new NoMorePartsException("Sorry we are out of CPU's!");
     }
-
 }

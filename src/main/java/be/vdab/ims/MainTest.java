@@ -2,6 +2,8 @@ package be.vdab.ims;
 
 import be.vdab.parts.ComputerParts;
 import be.vdab.parts.CpuBrand;
+import be.vdab.parts.Gpu;
+import be.vdab.parts.GpuBrand;
 import be.vdab.stock.*;
 
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ public class MainTest {
     ArrayList<ComputerParts> order1 = new ArrayList<>();
 
     order1.add(alternate.orderCpu(new CpuBrand[]{CpuBrand.AMD}));
-    order1.add(alternate.orderCpu(new CpuBrand[]{CpuBrand.INTEL}));
+    order1.add(alternate.orderGpu(new GpuBrand[]{GpuBrand.NVIDIA}));
     order1.add(alternate.orderCpu(new CpuBrand[]{CpuBrand.ARM}));
 
     System.out.println(alternate.getRevenue());

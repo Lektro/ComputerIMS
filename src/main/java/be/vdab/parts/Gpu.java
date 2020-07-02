@@ -10,7 +10,7 @@ public class Gpu {
         this.gprocessor = gpuBrand;
     }
 
-    public gpu(CpuBrand[] gpuBrand) {
+    public Gpu(CpuBrand[] gpuBrand) {
     }
 
     public Gpu getCpuBrand(GpuBrand[] gpuBrand) {

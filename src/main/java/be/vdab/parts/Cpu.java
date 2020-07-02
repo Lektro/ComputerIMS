@@ -17,7 +17,7 @@ public class Cpu implements ComputerParts {
         return null;
     }
 
-    public void use() {
+    public void buy() {
 
     }
 }
